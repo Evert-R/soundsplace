@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+@import url('https://fonts.googleapis.com/css?family=Chathura');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	font-family: 'special Elite';
+		color: #eeeeee;
+/*		background-color: rgb(47, 42, 1, 0.9); */	
+		background-image: url("../images/blackboard.jpg");
+}
+
+
+
+a {
+	color:#dadada;
+}
+
+a:hover {
+	color: #9a9a9a;
+}
+
+a:active {
+	color: red;
+}
+
+.form-control {
+	font-family: 'special Elite';
+	background-color: rgb(3, 128, 207, 0.07);
+/*	color: #eeeeee; */
+  }
+
+
+.container {
+
+}
+
+h1 {
+
+}
+
+nav {
+	height: 10vh;
+	background-image: url("../images/blackboard.jpg");
+	color: #dadada;
+}
+
+.content-wrapper {
+/*	background-color: rgb(255, 234, 67, 0.5); */	
+	border: 1px;
+	border-radius: 2%;
+	padding: 20px 20px 20px 20px;
+	box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.9);
+	margin-bottom: 15px;
+}
+
+.content-wrapper-login {
+	width: 25%;
+	margin: auto;
+	background-image: url("../assets/images/blackboard.jpg");
+	position: relative;
+	top: 50vh;
+	transform: translateY(-50%);
+}
+
+.content-wrapper-yellow {
+	background-color: rgb(255, 234, 67, 0.5);
+	color: #000000;
+}
+
+.content-wrapper-red {
+	background-color: rgb(123, 53, 53, 0.55);
+
+
+	color: #eeeeee;
+}
+
+
+.content-wrapper-chalkboard {
+
+
+	color: #ffffff;
+}
+
+.chat-board {
+	font-family: Chathura;
+	font-size: 150%; 
+	font-weight: 300;
+	letter-spacing: 0.5px;
+
+}
+
+.chat-wrapper {
+	margin-bottom: 3px;
+	background-color: rgb(0, 0, 0, 0.2);
+}
+
+.chat-profile {
+	height: 75px;
+}
+
+.float-left {
+	padding-right: 1Em;
+	float: left;
+}
+
+.float-right {
+	padding-left: 1Em;
+	float: right;
+}
+
+.timeline-table-right {
+		text-align: right;
+		padding: 3px;
+}
+
+
+.image-wrapper img {
+	box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.9);
+	border-radius: 3%;
+    display:block;
+    margin:auto;
+}
+
+
+.header-text {
+	text-align: left;
+	color: #dadada;
+	margin: 2px;
+}
+
+.header-wrapper {
+	border: 1px;
+	padding: 8px 0px 5px 10%;
+	background-color: rgb(0, 0, 0, 0.15);
+/*	background-color: white; */
+	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.9);
+	margin: 5px 0px 15px 0px;
+	border-radius: 2%;
+
+
+}
+
+
+aside {
+
+}
+
+.side-wrapper {
+	width: 100%;
+	font-family: 'Roboto';
+	font-size: 80%;
+	border-radius: 2%;
+	color: #dadada;
+	border: 1px;
+	padding: 20px 20px 20px 20px;
+	background-color: rgb(123, 53, 53, 0.55);
+	height: auto;
+	box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.9);
+}
+
+.interface-load {
+	color: rgb(75, 77, 76, 0.90);
+}
+
+.interface-play {
+	color: rgb(8, 109, 8, 0.71);
+}
+
+.interface-pause {
+	color: rgb(123, 53, 53, 0.55);
+}
+
+.interface-download {
+	color: rgb(255, 255, 255, 0.66);
+}
+
+.interface:hover {
+	color: #4b4d4c66;
+	cursor: pointer;
+}
+
+.yellow-button {
+	color: white;
+	margin-left: 75%;
+	background-color: transparent;
+	border: none;
+
+}
+
+.form-control-file {
+	font-family: inherit;
+	background-color: rgb(123, 53, 53, 0.55);
+
+}
+.yellow-button:hover {
+	color: rgb(8, 109, 8, 0.666);
+	cursor: pointer;
+
+}
+
+.red-button {
+	background-color: rgb(0, 0, 0, 0.666);
+}
+
+.red-button:hover {
+	background-color: rgb(255, 234, 67, 0.5);
+}
+
+
+.blackout {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	z-index: 1021;
+	background-color: rgb(0, 0, 0, 0.4);
+}
+
+
+ 
+
+@media (min-width: 768px) {
+	
+	.side-wrapper {
+	
+	height: 100%;
+	}
+	
+
+
+
+}

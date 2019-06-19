@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html" />
+		<meta name="author" content="Evert Rot" />
+		<title><?php echo $page_title; ?></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
+	</head>
+
+<body>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark nav-wrap">
+  <div class="navbar-brand">
+				<i class="fas fa-play-circle fa-2x" onclick="wavesurfer.play()"></i>
+				<i class="fas fa-pause-circle fa-2x" onclick="wavesurfer.pause()"></i>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php"><i class="fas fa-music fa-2x"></i><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="makepost.php"><i class="fas fa-upload fa-2x"></i></a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user-alt fa-2x"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		  <a class="dropdown-item" href="uploadfile.php">Upload</a>
+          <a class="dropdown-item" href="profile.php">Profile</a>
+		  <a class="dropdown-item" href="login.php">Log-in</a>
+		  <a class="dropdown-item" href="register.php">Register</a>
+          <a class="dropdown-item" href="logout.php">Log-out</a>
+		  <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">
+			<?php
+				if (isset ($_SESSION['logged_in'])) {
+					echo 'Online';
+					}
+					else {
+						echo 'Offline';
+					}
+			
+			?>
+		</a>
+      </li>
+    </ul>
+	<div>
+		<?php
+			if (isset ($_SESSION['version'])) {
+				echo "Version: ". $_SESSION['version'];
+			}
+			
+		?>
+	</div>
+  </div>
+</nav>
+
