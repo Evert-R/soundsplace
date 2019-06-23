@@ -11,17 +11,10 @@ body {
 
 
 
-a {
-	color:#dadada;
-}
 
-a:hover {
-	color: #9a9a9a;
-}
 
-a:active {
-	color: red;
-}
+
+
 
 .form-control {
 	font-family: 'special Elite';
@@ -41,8 +34,15 @@ h1 {
 nav {
 	height: 10vh;
 	background-image: url("../images/blackboard.jpg");
-	color: #dadada;
+	color: #eeeeee;
 }
+
+.nav-link {
+	color: #eeeeee;
+}
+
+/* ----------------------------------------Special paddings/margins/text */
+
 
 .content-wrapper {
 /*	background-color: rgb(255, 234, 67, 0.5); */	
@@ -158,7 +158,21 @@ aside {
 	box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.9);
 }
 
+.interface:hover {
+	color: #4b4d4c66;
+	cursor: pointer;
+}
+
+.nav-interface:hover {
+	color: rgba(0,0,0,0.4);
+	cursor: pointer;
+}
+
 .interface-load {
+	color: rgb(75, 77, 76, 0.90);
+}
+
+.interface-load:active {
 	color: rgb(75, 77, 76, 0.90);
 }
 
@@ -166,7 +180,16 @@ aside {
 	color: rgb(8, 109, 8, 0.71);
 }
 
+.fa-play-circle:active {
+	color: rgb(8, 109, 8, 0.71);
+
+}
+
 .interface-pause {
+	color: rgb(123, 53, 53, 0.55);
+}
+
+.fa-pause-circle:active {
 	color: rgb(123, 53, 53, 0.55);
 }
 
@@ -174,10 +197,18 @@ aside {
 	color: rgb(255, 255, 255, 0.66);
 }
 
-.interface:hover {
-	color: #4b4d4c66;
-	cursor: pointer;
+.interface-download:active {
+	color: rgb(255, 255, 255, 0.66);
 }
+
+.fa-download-circle:active {
+	color: rgb(255, 255, 255, 0.66);
+}
+
+
+
+
+
 
 .yellow-button {
 	color: white;
@@ -219,7 +250,13 @@ aside {
 	background-color: rgb(0, 0, 0, 0.4);
 }
 
-
+.message {
+	color: red;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1021;
+}
  
 
 @media (min-width: 768px) {

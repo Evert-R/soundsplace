@@ -38,7 +38,7 @@ $artist_name = $_SESSION['artist_name'];
 	// load class for mp3 parameters
 	require('./assets/includes/php/vendor/mp3file.class.php');
 	// Get posts from the database
-	$timeline = $mysqli->query("SELECT * FROM posts");
+	$timeline = $mysqli->query("SELECT * FROM posts ORDER BY post_id DESC");
 	while ($row = mysqli_fetch_assoc($timeline)) {
 		// make 3 columns per soundpost
 		echo "
@@ -108,17 +108,15 @@ $artist_name = $_SESSION['artist_name'];
 	?>
 
 
-
-
-	<div class="main-wrap" id="message">
-		<?php
-		// display error and empty message variable
+<div class="message">
+	<?php
+	// display error and empty message variable
 		if (isset($_SESSION['message'])) {
-			echo "<p>" . $_SESSION['message'] . "</p>";
-			unset($_SESSION['message']);
+		echo "<p>".$_SESSION['message']."</p>";
+		unset($_SESSION['message']);
 		}
-		?>
-	</div> <!-- main-wrap -->
+  ?>
+</div>
 
 	<?php
 	if ($_SESSION['active'] != 1) {
@@ -135,7 +133,7 @@ $artist_name = $_SESSION['artist_name'];
 	<BR><BR><BR>
 	<div class="container-fluid>
 	<div class="">
-	<footer class=" footer fixed-bottom">
+	<footer class="footer fixed-bottom">
 		<div class="waveformplayer" id="waveform"></div>
 		</footer>
 	</div>

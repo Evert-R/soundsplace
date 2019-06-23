@@ -73,20 +73,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<button class="button button-block" name="login" />Log In</button>
 
 		</form>
-		<div>
-			<?php
-					if (isset($_SESSION['message'])) {
-						echo "<p>" . $_SESSION['message'] . "</p>";
-						unset($_SESSION['message']);
-					}
-					?>
-
-
-		
-		</div>
 	</section>
 </div>
 
+
+
+<div class="message">
+	<?php
+	// display error and empty message variable
+		if (isset($_SESSION['message'])) {
+		echo "<p>".$_SESSION['message']."</p>";
+		unset($_SESSION['message']);
+		}
+  ?>
+</div>
 
 
 

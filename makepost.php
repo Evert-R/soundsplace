@@ -46,30 +46,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if ($_POST['formtype'] == 'audiofileupload') {
 		//if (isset($_POST['audiofileupload'])) {	
 		if ($_FILES['the_file']['error'] > 0) {
-			echo 'Problem: ';
+
 			switch ($_FILES['the_file']['error']) {
 				case 1:
-					echo 'File exceeded upload_max_filesize.';
+				$_SESSION['message'] = 'File exceeded upload_max_filesize.';
 					break;
 				case 2:
-					echo 'File exceeded max_file_size.';
+				$_SESSION['message'] = 'File exceeded max_file_size.';
 					break;
 				case 3:
-					echo 'File only partially uploaded.';
+				$_SESSION['message'] = 'File only partially uploaded.';
 					break;
 				case 4:
-					echo 'No file uploaded.';
+				$_SESSION['message'] = 'No file uploaded.';
 					break;
 				case 6:
-					echo 'Cannot upload file: No temp directory specified.';
+				$_SESSION['message'] = 'Cannot upload file: No temp directory specified.';
 					break;
 				case 7:
-					echo 'Upload failed: Cannot write to disk.';
+				$_SESSION['message'] = 'Upload failed: Cannot write to disk.';
 					break;
 				case 8:
-					echo 'A PHP extension blocked the file upload.';
+				$_SESSION['message'] = 'A PHP extension blocked the file upload.';
 					break;
 			}
+			header("location: makepost.php");
 			exit;
 		}
 
@@ -373,17 +374,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		?>
 
 
-		<?php
-		// display error and empty message variable
+<div class="message">
+	<?php
+	// display error and empty message variable
 		if (isset($_SESSION['message'])) {
-			echo "
-				<div class='row col-12 header-wrapper'>
-					<p>" . $_SESSION['message'] . "</p>
-				</div>
-					";
-			unset($_SESSION['message']);
+		echo "<p>".$_SESSION['message']."</p>";
+		unset($_SESSION['message']);
 		}
-		?>
+  ?>
+</div>
 
 		</br></br></br></br>
 </div>

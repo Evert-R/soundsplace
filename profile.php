@@ -18,6 +18,13 @@ if ( $_SESSION['logged_in'] != 1 ) {
 	exit;
 }
 
+// check if account is activated, else goto timeline
+if ($_SESSION['active'] != 1) {
+  $_SESSION['message'] = "Activate your account using the e-mail link to have full functionality";
+  header("location: index.php");  
+	exit;
+}
+
 else {
     // set vriables from session
     $artist_name = $_SESSION['artist_name'];
@@ -145,23 +152,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </div> <!-- main-wrap -->
 
 
-<div class="main-wrap" id="message">
+<div class="message">
 	<?php
 	// display error and empty message variable
 		if (isset($_SESSION['message'])) {
 		echo "<p>".$_SESSION['message']."</p>";
 		unset($_SESSION['message']);
 		}
-	?>
-</div> <!-- main-wrap -->
-
-<?php
-if ($_SESSION['active'] != 1) {
-	echo "<div class='main-wrap' id='message'>
-				<p>Activate your account using the e-mail link to have full functionality</p>
-			</div>";
-}
-?>
+  ?>
+</div>
 
 <?php
 	include('./assets/includes/html/footer.html');
