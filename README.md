@@ -1,75 +1,71 @@
-# Soundspace
+# Soundsplace
+### still miles away from finished
 
-This project actually started with me wanting to know how to make a log-in/log-out system in PHP with multiple users. The purpose of this app is to create a small independent space where musicians can post their music and discuss it with oher members of the group. It should be easy to setup on any webserver.  
+Note: This project started with me wanting to learn how to make a user registration /login /logout system using PHP. From there it got a bit out of hand and became the project wich I use to test out all my newly learned techniques.
 
-## Getting Started
+The basic function of this project is that it creates a social platform for musicians where they can upload their new made tracks, accompanied by a message, on wich the other musicians can react, and so discuss their new creation.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+It should be easy to install this on your own webserver and so create an environment with a selected number of people.
 
-### Prerequisites
+## Live version
 
-What things you need to install the software and how to install them
+https://soundsplace.evertrot.nl
+user: evert.rot@gmx.com
+pass: Test32!
 
-```
-Give examples
-```
+## UX
 
-### Installing
+## Features
 
-A step by step series of examples that tell you how to get a development env running
+Login / register page
+Place a sound : Here you can first upload a track, then a track-image, then your track-info & the message you want to share.
+Soundspace : The timeline to view and listen to  all tracks posted, and comment on them.
+Profilepage : Here you can update your info and upload an profile-image.
 
-Say what the step will be
+### Existing Features
+- allows users register
+- Allow users to login
+- Allow users to update their info
+- Allow users to upload a track, track-image and message
+- Allow users to view the timeline with tracks and listen to them.
 
-```
-Give the example
-```
+### Features Left to Implement
+- Allow users to upload a profile pic
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+### Known bugs
+- Errormessage looks weird when long
+- can't register in first approach
+- sender for verification mail shows sql user
+- verification mail links to localhost
 
 ## Built With
 
 * [VScode](https://code.visualstudio.com/) - IDE
 * [Notepad++](https://notepad-plus-plus.org/) - Code editor
 * [XAMPP](https://www.apachefriends.org) - Used to run my project locally with Apache/MySQL
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
+## Technologies Used
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+### Audio-Player
+https://wavesurfer-js.org/ (Javascript audio player) by https://github.com/katspaugh/wavesurfer.js (Licensed under a BSD-3-Clause License) https://opensource.org/licenses/BSD-3-Clause
 
-## Versioning
+### Mp3 file analizing 
+http://www.zedwood.com/article/php-calculate-duration-of-mp3 (php class to obtain properties of mp3 files) (Licensed under       Creative Commons CC-By-SA 3.0) https://creativecommons.org/licenses/by-sa/3.0/
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+### Responsive framework
+https://getbootstrap.com/ (css framework for grid and styling) (Licensed under MIT, docs CC BY 3.0) https://github.com/twbs/     bootstrap/blob/master/LICENSE https://creativecommons.org/licenses/by/3.0/
+
+### Icons
+https://fontawesome.com/ (icons) 
+
+## Testing
+
+## Deployment
+
+## Credits
+
+- Login system tutorial on wich i based the user registration
+https://clevertechie.com/php/20/login-system-php-mysql-database
 
 ## Authors
 
@@ -80,11 +76,3 @@ See also the list of [contributors](https://github.com/your/project/contributors
 ## License
 
 This project is Licensed under Creative Commons CC-By-NC-SA 3.0
-
-## Acknowledgments
-
-* https://wavesurfer-js.org/ (Javascript audio player) by https://github.com/katspaugh/wavesurfer.js (Licensed under a BSD-3-Clause License) https://opensource.org/licenses/BSD-3-Clause
-* http://www.zedwood.com/article/php-calculate-duration-of-mp3 (php class to obtain properties of mp3 files) (Licensed under Creative Commons CC-By-SA 3.0) https://creativecommons.org/licenses/by-sa/3.0/
-* https://getbootstrap.com/ (css framework for grid and styling) (Licensed under MIT, docs CC BY 3.0) https://github.com/twbs/bootstrap/blob/master/LICENSE https://creativecommons.org/licenses/by/3.0/
-* https://fontawesome.com/ (icons) 
-
