@@ -10,7 +10,7 @@ It should be easy to install this on your own webserver and so create an environ
 ## Live version
 
 https://soundsplace.evertrot.nl
-user: evert.rot@gmx.com
+user: zwaarvet@gmail.com
 pass: Test32!
 
 ## UX
